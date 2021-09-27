@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply border border-blue-400 rounded w-full transition duration-75 text-gray-900 p-2 h-12 focus:ring focus:ring-blue-300 outline-none;
+  }
+  .form-label {
+    @apply mb-4;
+  }
+  .form-label-span {
+    @apply text-left pb-2 block text-gray-700;
+  }
+  .form-error {
+    @apply text-red-500 text-sm;
+  }
+  .form-button {
+    @apply w-full bg-blue-700 border-0 text-lg text-white h-12 rounded transition duration-75 shadow-md font-bold outline-none cursor-pointer hover:bg-blue-500 focus:ring focus:ring-blue-300;
+  }
+  .header {
+    @apply text-center font-bold text-6xl my-12;
+  }
+}
