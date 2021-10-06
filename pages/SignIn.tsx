@@ -1,6 +1,6 @@
+import { Link, Redirect } from "react-router-dom";
 import { useCallback, useState } from "react";
 
-import { Link } from "react-router-dom";
 import axios from "axios";
 import fetcher from "@utils/fetcher";
 import useInput from "@hooks/useInput";
@@ -21,13 +21,18 @@ const SignIn = () => {
           { email, password },
           { withCredentials: true }
         )
-        .then(() => {})
+        .then((response) => {
+          mutate(response.data);
+        })
         .catch((error) =>
           setIsSignInError(error.response?.data?.statusCode === 401)
         );
     },
     [email, password]
   );
+
+  if (data === undefined) return <div>불러오는 중…</div>;
+  if (data) return <Redirect to="/workspace/sleact/channel/일반" />;
 
   return (
     <div className="w-96 mx-auto">

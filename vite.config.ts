@@ -19,6 +19,7 @@ export default defineConfig({
       "@hooks": path.resolve(__dirname, "hooks"),
       "@layouts": path.resolve(__dirname, "layouts"),
       "@pages": path.resolve(__dirname, "pages"),
+      "@typings": path.resolve(__dirname, "typings"),
       "@utils": path.resolve(__dirname, "utils"),
     },
   },

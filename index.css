@@ -22,3 +22,7 @@
     @apply text-center font-bold text-6xl my-12;
   }
 }
+
+.border__highlighter strong {
+  @apply bg-blue-200;
+}
